@@ -14,20 +14,27 @@ function removeQuery(url) {
  * @param {callback} resolve - callback for resolve
  * @param {callback} reject - callback for reject
  */
-function unshorten(url, resolve, reject) {
-    // inspired by https://stackoverflow.com/a/62588602
+function unshortenPromise(url, resolve, reject) {
     const https = require("https")
+    // inspired by https://stackoverflow.com/a/62588602
     https.get(url, (res) => {
         if (res.statusCode === 301 || res.statusCode === 302) {
-            return get(res.headers.location, resolve, reject)
+            return unshortenPromise(res.headers.location, resolve, reject)
         }
         resolve(url)
     })
 }
 
-async function unshortenPromise(url) {
-    return new Promise((resolve, reject) => get(url, resolve, reject))
+async function unshorten(url) {
+    return new Promise((resolve, reject) => unshortenPromise(url, resolve, reject))
 }
 
-module.exports.removeQuery = removeQuery()
-module.exports.unshorten = unshortenPromise()
+function defer(url) {
+    return `https://anonym.to/?${url}`
+}
+
+module.exports = {
+    removeQuery,
+    unshorten,
+    defer
+}
