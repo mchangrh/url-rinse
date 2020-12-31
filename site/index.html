@@ -1,0 +1,34 @@
+<html>
+<head>
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/dhg/Skeleton/css/skeleton.min.css");
+        @import url("https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css");
+        .u-center-abs {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateY(-50%) translateX(-50%);
+                -ms-transform: translateY(-50%) translateX(-50%);
+                    transform: translateY(-50%) translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="six columns u-center-abs">
+        <div>
+            <label for="url-input">URL to clean</label>
+            <input class="u-full-width" id="url-input"></div>
+        <input class="button-primary" type="submit" value="Clean" onclick="clean()">
+        <div>
+            <label for="url-output">Cleaned URL</label>
+            <input class="u-full-width" id="url-output"></div>
+    </div>
+    <script>
+        function clean() {
+            const result = removeQuery(document.getElementById('url-input').value)
+            document.getElementById('url-output').value = result
+        }
+        function removeQuery(e){return e.replace(/&.*/, "").split("?")[0]}
+    </script>
+</body>
+</html>
