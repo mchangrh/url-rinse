@@ -19,44 +19,20 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(' ');
     const command = args.shift().toLowerCase();
     const url = args[0]
-    // run appropiate command
-    if (command === 'rinse' || command === 'clean') { // clean url
-      if (url) {
+    if (url) { // run appropiate command
+      if (command === 'clean') { // clean url
         rinse.unshorten(url)
-        .then((longUrl) => {
-          message.channel.send(rinse.removeQuery(longUrl))
-        })
-        message.delete({ timeout: 5000})
-      } else {
-        message.channel.send('No URL')
-        .delete({ timeout: 5000 })
-      }
-    } else if (command === 'unshort') { // unshorten url
-      if (url) {
-        rinse.unshorten(url).then((longUrl) => {
-            message.channel.send(longUrl)
-        })
-        message.delete({ timeout: 5000})
-      } else {
-        message.channel.send('No URL')
-        .delete({ timeout: 5000 })
-      }
-    } else if (command === 'removequery') {
-      if (url) {
+        .then((longUrl) => message.channel.send(rinse.removeQuery(longUrl)))
+      } else if (command === 'unshort') { // unshorten url
+        rinse.unshorten(url).then((longUrl) => message.channel.send(longUrl))
+      } else if (command === 'removequery') {
         message.channel.send(rinse.removeQuery(url))
-        message.delete({ timeout: 5000})
-      } else {
-        message.channel.send('No URL')
-        .delete({ timeout: 5000 })
-      }
-    } else if (command === 'defer') {
-      if (url) {
+      } else if (command === 'defer') {
         message.channel.send(rinse.defer(url))
-        message.delete({ timeout: 5000})
-      } else {
-        message.channel.send('No URL')
-        .delete({ timeout: 5000 })
       }
+      message.delete({ timeout: 5000}) // delete message
+    } else {
+      message.channel.send('No URL')
     }
 }})
 
