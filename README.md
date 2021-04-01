@@ -1,4 +1,8 @@
 # url-rinse
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mchangrh/url-rinse/Unit%20Testing?label=tests)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mchangrh/url-rinse/Node.js%20Package)
+[![install size](https://packagephobia.now.sh/badge?p=url-rinse)](https://packagephobia.now.sh/result?p=url-rinse)
+
 Cleans up URLs
 
 # Install
