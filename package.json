@@ -1,0 +1,25 @@
+{
+  "name": "url-rinse",
+  "version": "1.0.1",
+  "description": "Cleans URLs for sharing",
+  "main": "lib/urlrinse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchangrh/url-rinse.git"
+  },
+  "keywords": [
+    "url-clean",
+    "url",
+    "url-rinse",
+    "unshorten"
+  ],
+  "author": "Michael Chang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mchangrh/url-rinse/issues"
+  },
+  "homepage": "https://github.com/mchangrh/url-rinse#readme"
+}
