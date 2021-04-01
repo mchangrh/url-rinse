@@ -12,9 +12,9 @@ const rinse = require('url-rinse');
 ```
 
 ## General
- - `await rinse.unshorten(url)` - unshorten with node https
+ - `rinse.unshorten(url)` - unshorten with node https
  - `await rinse.swUnshorten(url)` - unshorten with Service Worker fetch (CF Workers)
- - `rinse.removeQuery(url)` - removes all query strings
+ - `rinse.removeParam(url)` - removes all query strings
  - `rinse.derefer(url)` - derefers url with https://anonym.to
 
 ## Specific
