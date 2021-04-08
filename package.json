@@ -1,6 +1,6 @@
 {
   "name": "url-rinse",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Cleans URLs for sharing",
   "main": "lib/urlrinse.js",
   "scripts": {
@@ -25,6 +25,5 @@
   "devDependencies": {
     "mocha": "^8.3.2",
     "node-fetch": "^2.6.1"
-  },
-  "dependencies": {}
+  }
 }

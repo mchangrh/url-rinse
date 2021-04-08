@@ -1,7 +1,7 @@
 # url-rinse
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mchangrh/url-rinse/Unit%20Testing?label=tests)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mchangrh/url-rinse/Node.js%20Package)
-[![install size](https://packagephobia.now.sh/badge?p=url-rinse)](https://packagephobia.now.sh/result?p=url-rinse)
+![Test Status](https://img.shields.io/github/workflow/status/mchangrh/url-rinse/unit-test?label=tests)
+![Build Status](https://img.shields.io/github/workflow/status/mchangrh/url-rinse/npm-publish)
+[![install Size](https://packagephobia.com/badge?p=url-rinse)](https://packagephobia.com/result?p=url-rinse)
 
 Cleans up URLs
 
@@ -16,12 +16,12 @@ const rinse = require('url-rinse');
 ```
 
 ## General
- - `rinse.unshorten(url)` - unshorten with node https
- - `await rinse.swUnshorten(url)` - unshorten with Service Worker fetch (CF Workers)
- - `rinse.removeParam(url)` - removes all query strings
- - `rinse.derefer(url)` - derefers url with https://anonym.to
+ - `await unshorten(url)` - unshorten with node https
+ - `await swUnshorten(url)` - unshorten with window.fetch (Service Workers)
+ - `removeParam(url)` - removes all query parameters
+ - `defer(url)` - remove referer with https://anonym.to
 
 ## Specific
- - `rinse.amazon(url)` - removes query strings and directs to /dp page
- - `rinse.reddit(url)` - removes query string and shortens reddit urls
+ - `amazon(url)` - shorten amazon url
+ - `reddit(url)` - shortens reddit url
 

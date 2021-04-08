@@ -74,8 +74,8 @@ const reddit = {
     post: 'https://www.reddit.com/r/help/comments/5524cd/how_to_shorten_a_reddit_comment_url/'
   },
   clean: {
-    comment: 'https://reddit.com/comments/5524cd/c/d86w2uv/',
-    post: 'https://reddit.com/comments/5524cd'
+    comment: 'https://reddit.com/comments/5524cd/c/d86w2uv',
+    post: 'https://redd.it/5524cd'
   }
 }
 
