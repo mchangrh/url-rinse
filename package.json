@@ -1,6 +1,6 @@
 {
   "name": "url-rinse",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Cleans URLs for sharing",
   "main": "lib/urlrinse.js",
   "scripts": {

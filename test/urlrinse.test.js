@@ -75,7 +75,7 @@ const reddit = {
   },
   clean: {
     comment: 'https://reddit.com/comments/5524cd/c/d86w2uv',
-    post: 'https://redd.it/5524cd'
+    post: 'https://reddit.com/comments/5524cd'
   }
 }
 
