@@ -16,5 +16,6 @@ const rinse = require('url-rinse')
  - `await swUnshorten(url)` - unshorten with window.fetch (Service Workers)
  - `removeParam(url)` - removes all query parameters
  - `defer(url)` - remove referer with https://anonym.to
+ - `deAmp(url)` - return original non-AMP link (fetch/sw only)
  - `amazon(url)` - shorten amazon url
  - `reddit(url)` - shortens reddit url
