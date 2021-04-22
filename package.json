@@ -1,6 +1,6 @@
 {
   "name": "url-rinse",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Cleans URLs for sharing",
   "main": "lib/urlrinse.js",
   "scripts": {
@@ -15,12 +15,9 @@
     "url",
     "url-rinse",
     "unshorten",
-    "redirects",
-    "clean",
-    "dereferrer",
+    "dereferer",
     "follow-redirects",
-    "clean-redirect",
-    "clean-url"
+    "un-amp"
   ],
   "author": "Michael Chang",
   "license": "MIT",
